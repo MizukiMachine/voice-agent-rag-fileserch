@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Conversation Engine",
+  "description": "A RAG-based voice conversation AI utilizing Gemini Live API for low-latency document Q&A.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

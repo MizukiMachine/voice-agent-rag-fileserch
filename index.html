@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graffity AI Conversation Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      /* Custom scrollbar for chat */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              orange: {
+                100: '#ffedd5',
+                500: '#f97316',
+              },
+              rose: {
+                100: '#ffe4e6',
+              },
+              amber: {
+                200: '#fde68a',
+              },
+              // Removed partial slate definition to use full default slate palette
+            },
+            animation: {
+              'progress-stripes': 'progress-stripes 1s linear infinite',
+              'bounce-slow': 'bounce 2s infinite',
+            },
+            keyframes: {
+              'progress-stripes': {
+                '0%': { backgroundPosition: '1rem 0' },
+                '100%': { backgroundPosition: '0 0' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gradient-to-br from-orange-100 via-rose-100 to-amber-200 min-h-screen text-slate-800">
+    <div id="root"></div>
+  </body>
+</html>
